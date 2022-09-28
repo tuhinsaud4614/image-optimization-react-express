@@ -1,0 +1,121 @@
+.Root {
+  overflow-x: auto;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.Table {
+  display: table;
+  width: 100%;
+  position: relative;
+  text-align: left;
+  text-indent: 0;
+  border-color: inherit;
+  border-collapse: collapse;
+}
+
+:where(.Table *:first-child) :where(*:first-child) :where(th, td):first-child {
+  border-top-left-radius: 0.5rem;
+}
+:where(.Table *:first-child) :where(*:last-child) :where(th, td):last-child {
+  border-top-right-radius: 0.5rem;
+}
+
+.Table :where(thead, tfoot) :where(th, td) {
+  --b2: 220 17% 17%;
+  --b1: 220 18% 20%;
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--b2, var(--b1)) / var(--tw-bg-opacity));
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.Table :where(th, td) {
+  white-space: nowrap;
+  padding: 1rem;
+  vertical-align: middle;
+  color: #fff;
+}
+
+.Table :where(tbody th, tbody td) {
+  --b1: 220 18% 20%;
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--b1) / var(--tw-bg-opacity));
+}
+
+.Table:where(:not(.Table-zebra))
+  :where(thead, tbody, tfoot)
+  :where(tr:not(:last-child) :where(th, td)) {
+  border-bottom-width: 1px;
+  --b2: 220 17% 17%;
+  --b1: 220 18% 20%;
+  --tw-bg-opacity: 1;
+  border-color: hsl(var(--b2, var(--b1)) / var(--tw-border-opacity));
+}
+.Table :where(th, td) {
+  white-space: nowrap;
+  padding: 1rem;
+  vertical-align: middle;
+}
+
+.ImgRoot {
+  display: flex;
+  align-items: center;
+}
+
+.SpaceX3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.Avatar {
+  position: relative;
+  display: inline-flex;
+}
+
+.AvatarWrap {
+  position: relative;
+  display: block;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  width: 3rem;
+  height: 3rem;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMjAwJyBoZWlnaHQ9JzIwMCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cGF0aCBkPSdNMTAwIDBDMjAgMCAwIDIwIDAgMTAwczIwIDEwMCAxMDAgMTAwIDEwMC0yMCAxMDAtMTAwUzE4MCAwIDEwMCAwWicvPjwvc3ZnPg==);
+  mask-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMjAwJyBoZWlnaHQ9JzIwMCcgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJz48cGF0aCBkPSdNMTAwIDBDMjAgMCAwIDIwIDAgMTAwczIwIDEwMCAxMDAgMTAwIDEwMC0yMCAxMDAtMTAwUzE4MCAwIDEwMCAwWicvPjwvc3ZnPg==);
+}
+
+.Img {
+  display: block;
+  max-width: 100%;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.Title {
+  color: white;
+  font-weight: 700;
+}
+
+.PreviewImage {
+  width: "100%";
+  height: "100%";
+  object-fit: "cover";
+}
+
+.BlurImage {
+  position: absolute !important;
+  left: 0;
+  top: 0;
+  z-index: 20;
+}
