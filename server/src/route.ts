@@ -9,7 +9,7 @@ const router = Router();
 
 router.post(
   "/images/upload",
-  imageUpload(maxFileSize(5), IMAGES_DIR_PATH).single("image"),
+  imageUpload(maxFileSize(20), IMAGES_DIR_PATH).single("image"),
   validateRequest(uploadImageValidateSchema, 422),
   sendImage
 );

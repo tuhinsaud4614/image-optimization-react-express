@@ -12,6 +12,6 @@ export const uploadImageValidateSchema = yup.object().shape({
     .test(
       "fileSize",
       "Image size greater than 5mb",
-      (value) => !!value && value.size <= maxFileSize(5)
+      (value) => !!value && value.size <= maxFileSize(20)
     ),
 });
